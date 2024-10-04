@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+</head>
+<body>
+    <header>
+        <h1>Sorting Algorithm Visualizer</h1>
+    </header>
+
+    <div class="controls">
+        <label for="algorithm">Algorithm:</label>
+        <select id="algorithm">
+            <option value="bubbleSort">Bubble Sort</option>
+            <option value="insertionSort">Insertion Sort</option>
+            <option value="selectionSort">Selection Sort</option>
+            <option value="mergeSort">Merge Sort</option>
+            <option value="quickSort">Quick Sort</option>
+            <option value="heapSort">Heap Sort</option>
+            <option value="shellSort">Shell Sort</option>
+        </select>
+
+        <label for="arraySize">Array Size:</label>
+        <input type="range" id="arraySize" min="10" max="150" value="50">
+
+        <label for="speed">Speed:</label>
+        <input type="range" id="speed" min="1" max="100" value="50">
+
+        <button id="generate">Generate New Array</button>
+        <button id="start">Start Sorting</button>
+        <button id="pause">Pause</button>
+        <button id="reset">Reset</button>
+
+        <label for="customArray">Custom Array:</label>
+        <input type="text" id="customArray" placeholder="e.g., 5,3,8,1,2">
+        <button id="useCustomArray">Use Custom Array</button>
+    </div>
+
+    <div class="canvas-container">
+        <canvas id="sortingCanvas" width="800" height="400"></canvas>
+    </div>
+
+    <div class="stats">
+        <p id="complexity">Time Complexity: </p>
+        <p id="comparisons">Comparisons: <span class="stat-value">0</span></p>
+        <p id="swaps">Swaps: <span class="stat-value">0</span></p>
+        <p id="timeTaken">Time Taken: <span class="stat-value">0 ms</span></p>
+        <div id="algorithmTimes" class="algorithm-times">
+            Times for all algorithms: <br><span id="algorithmTimesDisplay"></span>
+        </div>
+        <div id="bestAlgorithm" class="best-algorithm">
+            Best Algorithm: <span id="bestAlgorithmDisplay"></span>
+        </div>
+    </div>
+    
+
+    <div class="explanation">
+        <h2>Algorithm Explanation</h2>
+        <pre id="algorithmExplanation"></pre>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Sorting Algorithm Visualizer. <a href="https://github.com/yashsharma-007" target="_blank">GitHub</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
